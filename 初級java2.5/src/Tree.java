@@ -1,7 +1,7 @@
 
-public class Face {
+public class Tree {
 	int x,y,vx,vy;
-	public Face(int x,int y,int vx,int vy) {
+	public Tree(int x,int y,int vx,int vy) {
 		this.x=x;
 		this.y=y;
 		this.vx=vx;
@@ -9,9 +9,9 @@ public class Face {
 	}
 	
 	public void draw(MyFrame frame){
-		frame.fillOval(x,y,50,100);
-		frame.fillOval(x+100,y,50,100);
-		frame.fillRect(x,y+160,150,10);
+		frame.fillOval(x,y,50,50);
+		
+		frame.fillRect(x+20,y+20,10,100);
 	}
 	
 	public void move() {
