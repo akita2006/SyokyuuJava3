@@ -4,8 +4,11 @@ public class DisplayVehicleVector extends MyFrame{
 	public void run() {
 	Vector<Vehicle> vehicles=new Vector<Vehicle>();
 	vehicles.add(new Car(10,30,3,0));
-	vehicles.add(new Car(10,100,5,0));
-	vehicles.add(new Train(10,150,7,0));	
+	vehicles.add(new Car(200,100,-5,0));
+	vehicles.add(new Train(10,160,7,0));
+	vehicles.add(new Train(200,220,-9,0));
+	vehicles.add(new Truck(10,300,11,0));
+	vehicles.add(new Truck(10,350,13,0));
 		for(int i=0; i<30; i++) {
 			clear();
 			for(int j=0; j<vehicles.size(); j++) {
