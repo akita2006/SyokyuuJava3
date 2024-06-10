@@ -1,5 +1,7 @@
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
-public class Car extends Vehicle{
+public class Car extends Vehicle implements KeyListener{
 	
 	public Car(int x,int y,int vx,int vy) {
 		super(x,y,vx,vy);
@@ -8,8 +10,32 @@ public class Car extends Vehicle{
 	public void draw(MyFrame frame){
 		frame.fillRect(x+20,y,40,20);		
 		frame.fillRect(x,y+20,80,20);
-		frame.fillOval(x+10,y+40,20,20);
+		frame.fillOval(x+10,y+40,20,20);	
 		frame.fillOval(x+50,y+40,20,20);
+	}
+
+	@Override
+	public void keyTyped(KeyEvent e) {			//キーから文字が入力されたとき
+		// TODO 自動生成されたメソッド・スタブ
+		
+	}
+
+	@Override
+	public void keyPressed(KeyEvent e) {		//キーが押されたとき
+		// TODO 自動生成されたメソッド・スタブ
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+		vx=-5;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			vx=5;
+			}
+		System.out.println("キーが押されました");
+	}
+
+	@Override
+	public void keyReleased(KeyEvent e) {		//キーが離されたとき
+		// TODO 自動生成されたメソッド・スタブ
+		
 	}
 	
 	
