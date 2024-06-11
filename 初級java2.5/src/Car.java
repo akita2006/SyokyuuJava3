@@ -28,13 +28,19 @@ public class Car extends Vehicle implements KeyListener{
 		}
 		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
 			vx=5;
-			}
+		}
 		System.out.println("キーが押されました");
 	}
 
 	@Override
 	public void keyReleased(KeyEvent e) {		//キーが離されたとき
 		// TODO 自動生成されたメソッド・スタブ
+		if(e.getKeyCode()==KeyEvent.VK_LEFT) {
+			vx=0;
+		}
+		if(e.getKeyCode()==KeyEvent.VK_RIGHT) {
+			vx=0;
+		}		
 		
 	}
 	
